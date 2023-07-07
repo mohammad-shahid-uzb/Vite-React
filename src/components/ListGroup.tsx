@@ -1,5 +1,7 @@
 import "./ListGroup.css";
 import Logo from "../assets/akros_trans.png";
+//import background from "../assets/Samarkand.jpeg";
+import uzb from "../assets/uzb.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
@@ -59,6 +61,36 @@ function ListGroup() {
             height: 0.5,
           }}
         />
+        <Stack direction="row" spacing={1}>
+          <Button color="secondary">Home</Button>
+          <Button color="secondary">College Admissions</Button>
+          <Button color="secondary">Seminars</Button>
+          <Button color="secondary">Our Team</Button>
+          <Button color="secondary">Resources & Tips</Button>
+        </Stack>
+      </div>
+      <div
+        style={{
+          height: "800px",
+          width: "100%",
+          backgroundImage: `url(${uzb})`,
+          position: "relative",
+          textAlign: "center",
+          color: "Black",
+        }}
+      >
+        <div
+          className="centered"
+          style={{
+            position: "absolute",
+            top: "40px",
+            left: "300px",
+          }}
+        >
+          <p style={{ color: "Blue", fontSize: "60px" }}>
+            College Admissions Guidance
+          </p>
+        </div>
       </div>
     </>
   );
