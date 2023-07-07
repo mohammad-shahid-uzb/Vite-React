@@ -10,15 +10,7 @@ function ListGroup() {
     marginTop: "12px",
     marginBottom: "0",
   };
-  const buttonstyle = {
-    background: "transparent",
-    //color: "white",
-    fontSize: "20px",
-    //padding: "10px 60px",
-    borderRadius: "10px",
-    // margin: "10px 0px",
-    cursor: "pointer",
-  };
+
   return (
     <>
       <div
