@@ -1,6 +1,7 @@
 import "./ListGroup.css";
 import Logo from "../assets/akros_trans.png";
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 function ListGroup() {
   const mystyle = {
@@ -35,8 +36,21 @@ function ListGroup() {
               Uzbekistan-Kazakhstan
             </p>
           </div>
-          <div className="column" style={{ flex: "20%", marginTop: "15px" }}>
-            <Button variant="outlined">Contact Us</Button>
+          <div
+            className="column"
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              width: "auto",
+              height: "50px",
+              marginTop: "8px",
+            }}
+          >
+            <Stack direction="row" spacing={2}>
+              <Button variant="contained" color="success">
+                Contact Us
+              </Button>
+            </Stack>
           </div>
         </div>
         <hr
