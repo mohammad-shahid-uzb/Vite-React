@@ -2,6 +2,7 @@ import "./ListGroup.css";
 import Logo from "../assets/akros_trans.png";
 import nsp from "../assets/nsplsh.jpg";
 import uzb from "../assets/uzb.jpg";
+import ipad from "../assets/iPad.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 
@@ -186,12 +187,297 @@ function ListGroup() {
         </div>
         <div
           style={{
-            height: "1400px",
-            width: "95%",
+            height: "680px",
+            width: "auto",
             backgroundImage: `url(${nsp})`,
             marginTop: "470px",
           }}
-        ></div>
+        >
+          <div
+            style={{
+              maxWidth: "70%",
+              position: "absolute",
+              marginLeft: "200px",
+              marginTop: "100px",
+            }}
+          >
+            <Stack direction="row" spacing={10}>
+              <div>
+                <p
+                  style={{
+                    color: "#ed9121",
+                    fontSize: "57px",
+                    fontStyle: "bold",
+                  }}
+                >
+                  Application Full Package
+                </p>
+              </div>
+              <div>
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "#00008b",
+                    fontSize: "18px",
+                    marginTop: "50px",
+                    background: "#f0ffff",
+                    paddingRight: "5px",
+                  }}
+                >
+                  <ul className="list-unstyled">
+                    <li style={{ marginBottom: "10px" }}>
+                      <span style={{ position: "relative" }}>
+                        on-1 meetings with our MBBS graduated mentors from
+                        spring-early summer of Grade 11
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        Application strategy design, including applicant
+                        profile, college choice, and timeline planning, etc.
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        Guidance and help with application materials, including
+                        essays and interview preparation, etc.
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        Application logistics management, including form filing,
+                        project management, and parent consultation, etc.
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        Advice on offer considerations, college life, and Uzbek
+                        & Kazak cultures, etc. ​​ Inquire below for pricing and
+                        personalized counseling options
+                      </span>
+                    </li>
+                  </ul>
+                </p>
+                <Button variant="contained">Reserve Now</Button>
+              </div>
+            </Stack>
+          </div>
+        </div>
+        <div
+          style={{
+            height: "580px",
+            width: "auto",
+            backgroundImage: `url(${ipad})`,
+          }}
+        >
+          <div
+            style={{
+              maxWidth: "70%",
+              position: "absolute",
+              marginLeft: "200px",
+              marginTop: "100px",
+            }}
+          >
+            <Stack direction="row" spacing={10}>
+              <div>
+                <p
+                  style={{
+                    color: "#ed9121",
+                    fontSize: "57px",
+                    fontStyle: "bold",
+                  }}
+                >
+                  Application Essay Help
+                </p>
+              </div>
+              <div>
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "#f5f5f5",
+                    fontSize: "19px",
+                    marginTop: "50px",
+                    paddingRight: "5px",
+                    opacity: 100,
+                  }}
+                >
+                  <ul className="list-unstyled">
+                    <li style={{ marginBottom: "10px" }}>
+                      <span style={{ position: "relative" }}>
+                        Three packages for different needs
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        Guidance and advice from our MBBS graduated mentors on
+                        essay ideas, structure, and delivery
+                      </span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>Extensive comments on writing pieces</span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>Guaranteed feedback within 48 hours</span>
+                    </li>
+                    <li style={{ marginBottom: "10px" }}>
+                      <span>
+                        {" "}
+                        Long-term partnership with a dedicated mentor
+                      </span>
+                    </li>
+                  </ul>
+                </p>
+                <Button variant="contained">Reserve Now</Button>
+              </div>
+            </Stack>
+          </div>
+        </div>
+        <Stack direction="row" spacing={10} padding={5}>
+          <div
+            className="card"
+            style={{
+              width: "22rem",
+              height: "30rem",
+              background: "#50c878",
+              paddingTop: "5px",
+            }}
+          >
+            <div className="card-body">
+              <p
+                className="card-text"
+                style={{
+                  textAlign: "left",
+                  color: "#f5f5f5",
+                  fontSize: "19px",
+                  marginTop: "80px",
+                  marginBottom: "80px",
+                  paddingRight: "5px",
+                  opacity: 100,
+                }}
+              >
+                <ul className="list-unstyled">
+                  <li style={{ marginBottom: "10px" }}>
+                    <span style={{ position: "relative" }}>
+                      Three packages for different needs
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>
+                      Guidance and advice from our MBBS graduated mentors on
+                      essay ideas, structure, and delivery
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Extensive comments on writing pieces</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Guaranteed feedback within 48 hours</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span> Long-term partnership with a dedicated mentor</span>
+                  </li>
+                </ul>
+              </p>
+              <Button variant="contained">Reserve Now</Button>
+            </div>
+          </div>
+          <div
+            className="card"
+            style={{
+              width: "22rem",
+              height: "30rem",
+              background: "#50c878",
+              paddingTop: "5px",
+            }}
+          >
+            <div className="card-body">
+              <p
+                className="card-text"
+                style={{
+                  textAlign: "left",
+                  color: "#f5f5f5",
+                  fontSize: "19px",
+                  marginTop: "80px",
+                  marginBottom: "80px",
+                  paddingRight: "5px",
+                  opacity: 100,
+                }}
+              >
+                <ul className="list-unstyled">
+                  <li style={{ marginBottom: "10px" }}>
+                    <span style={{ position: "relative" }}>
+                      Three packages for different needs
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>
+                      Guidance and advice from our MBBS graduated mentors on
+                      essay ideas, structure, and delivery
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Extensive comments on writing pieces</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Guaranteed feedback within 48 hours</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span> Long-term partnership with a dedicated mentor</span>
+                  </li>
+                </ul>
+              </p>
+              <Button variant="contained">Reserve Now</Button>
+            </div>
+          </div>
+          <div
+            className="card"
+            style={{
+              width: "22rem",
+              height: "30rem",
+              background: "#50c878",
+              paddingTop: "5px",
+            }}
+          >
+            <div className="card-body">
+              <p
+                className="card-text"
+                style={{
+                  textAlign: "left",
+                  color: "#f5f5f5",
+                  fontSize: "19px",
+                  marginTop: "80px",
+                  marginBottom: "80px",
+                  paddingRight: "5px",
+                  opacity: 100,
+                }}
+              >
+                <ul className="list-unstyled">
+                  <li style={{ marginBottom: "10px" }}>
+                    <span style={{ position: "relative" }}>
+                      Three packages for different needs
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>
+                      Guidance and advice from our MBBS graduated mentors on
+                      essay ideas, structure, and delivery
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Extensive comments on writing pieces</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Guaranteed feedback within 48 hours</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span> Long-term partnership with a dedicated mentor</span>
+                  </li>
+                </ul>
+              </p>
+              <Button variant="contained">Reserve Now</Button>
+            </div>
+          </div>
+        </Stack>
       </div>
     </>
   );
