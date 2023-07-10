@@ -1,10 +1,14 @@
 import "./ListGroup.css";
 import Logo from "../assets/akros_trans.png";
 import nsp from "../assets/nsplsh.jpg";
+import nsp1 from "../assets/nsp1.jpg";
 import uzb from "../assets/uzb.jpg";
 import ipad from "../assets/iPad.jpg";
+import door from "../assets/2006.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import ContactForm from "../components/Form";
+import { FaCopyright } from "react-icons/fa";
 
 function ListGroup() {
   const mystyle = {
@@ -478,6 +482,146 @@ function ListGroup() {
             </div>
           </div>
         </Stack>
+      </div>
+      <div
+        style={{
+          height: "580px",
+          width: "auto",
+          backgroundImage: `url(${nsp1})`,
+          marginTop: "2400px",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "70%",
+            position: "absolute",
+            marginLeft: "200px",
+            marginTop: "100px",
+          }}
+        >
+          <Stack direction="row" spacing={10}>
+            <div>
+              <p
+                style={{
+                  color: "#800080",
+                  fontSize: "57px",
+                  fontStyle: "bold",
+                }}
+              >
+                On-Demand Counseling
+              </p>
+            </div>
+            <div>
+              <p
+                style={{
+                  textAlign: "left",
+                  color: "#f5f5f5",
+                  fontSize: "19px",
+                  marginTop: "50px",
+                  paddingRight: "5px",
+                  opacity: 100,
+                }}
+              >
+                <ul className="list-unstyled">
+                  <li style={{ marginBottom: "10px" }}>
+                    <span style={{ position: "relative" }}>
+                      1-on-1 meetings with our MBBS graduated mentors
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>College choice counseling</span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Independent review of holistic application </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>
+                      Admission timeline choice (EA, ED, Regular) counseling
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>
+                      Strategic course selection (Grades 11 and lower){" "}
+                    </span>
+                  </li>
+                  <li style={{ marginBottom: "10px" }}>
+                    <span>Hourly Rate: $150</span>
+                  </li>
+                </ul>
+              </p>
+              <Button variant="contained">Reserve Now</Button>
+            </div>
+          </Stack>
+        </div>
+      </div>
+      <div className="row" style={{ display: "flex", marginTop: "150px" }}>
+        <div
+          className="column-md"
+          style={{
+            marginLeft: "90px",
+            marginRight: "100px",
+            width: "450px",
+          }}
+        >
+          <img src={door} height={"950px"} width={"450px"} />
+        </div>
+        <div className="column" style={{ height: "1000px", width: "450px" }}>
+          <ContactForm />
+          <hr
+            style={{
+              backgroundColor: "black",
+              height: 0.5,
+            }}
+          />
+          <p className="color_15 wixui-rich-text__text" style={mystyle}>
+            Corporate Office :
+            <p
+              style={{
+                color: "Black",
+                fontSize: "16px",
+                padding: "0",
+                marginTop: "12px",
+                marginBottom: "0",
+              }}
+            >
+              Tashkent, Uzbekistan.
+            </p>
+          </p>
+          <p className="color_15 wixui-rich-text__text" style={mystyle}>
+            India Office :
+            <p
+              style={{
+                color: "Black",
+                fontSize: "16px",
+                padding: "0",
+                marginTop: "12px",
+                marginBottom: "0",
+              }}
+            >
+              Address: Keas 69 Str. 15234, New Delhi, India.
+              <br /> +30-2106019311 (landline) <br />
+              +30-6977664062 (mobile phone) <br />
+              +30-2106398905 (fax)
+            </p>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p
+          className="color_15 wixui-rich-text__text"
+          style={{
+            color: "#5f3799",
+            fontSize: "20px",
+            padding: "0",
+            marginTop: "12px",
+            marginBottom: "0",
+            position: "relative",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <FaCopyright /> Akros Consultancy Services
+        </p>
       </div>
     </>
   );
