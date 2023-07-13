@@ -1,5 +1,3 @@
-import "./ListGroup.css";
-import Logo from "../assets/akros_trans.png";
 import nsp from "../assets/nsplsh.jpg";
 import nsp1 from "../assets/nsp1.jpg";
 import uzb from "../assets/uzb.jpg";
@@ -7,184 +5,84 @@ import ipad from "../assets/iPad.jpg";
 import door from "../assets/2006.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import ContactForm from "../components/Form";
+import ContactForm from "./Form";
 import { FaCopyright } from "react-icons/fa";
+import "./Admission.css";
 
-function ListGroup() {
-  const mystyle = {
-    color: "Blue",
-    fontSize: "20px",
-    padding: "0",
-    marginTop: "12px",
-    marginBottom: "0",
-  };
-
+function AdmissionForm() {
   return (
     <>
       <div
-        className="container"
         style={{
-          marginRight: "6%",
-          marginLeft: "6%",
-        }}
-      >
-        <div className="row" style={{ display: "flex", height: "auto" }}>
-          <div className="column">
-            <img src={Logo} height={"70"} />
-          </div>
-          <div className="column" style={{ flex: "70%" }}>
-            <p className="color_15 wixui-rich-text__text" style={mystyle}>
-              Akros Consultancy Services
-            </p>
-            <p
-              className="color_15 wixui-rich-text__text"
-              style={{ margin: "0" }}
-            >
-              Uzbekistan-Kazakhstan
-            </p>
-          </div>
-          <div
-            className="column"
-            style={{
-              display: "flex",
-              justifyContent: "right",
-              width: "auto",
-              height: "50px",
-              marginTop: "8px",
-            }}
-          >
-            <Stack direction="row" spacing={2}>
-              <Button variant="contained" color="success">
-                Contact Us
-              </Button>
-            </Stack>
-          </div>
-        </div>
-        <hr
-          style={{
-            backgroundColor: "black",
-            height: 0.5,
-          }}
-        />
-        <Stack direction="row" spacing={1}>
-          <Button color="secondary">Home</Button>
-          <Button color="secondary">College Admissions</Button>
-          <Button color="secondary">Seminars</Button>
-          <Button color="secondary">Our Team</Button>
-          <Button color="secondary">Resources & Tips</Button>
-        </Stack>
-      </div>
-      <div
-        style={{
-          height: "600px",
+          height: "700px",
           width: "100%",
           backgroundImage: `url(${uzb})`,
-          position: "absolute",
           textAlign: "center",
-          color: "Black",
         }}
       >
-        <div
-          className="centered"
-          style={{
-            position: "relative",
-            top: "40px",
-          }}
-        >
-          <p style={{ color: "Blue", fontSize: "60px" }}>
-            College Admissions Guidance
-          </p>
-        </div>
+        <span style={{ color: "Blue", fontSize: "60px" }}>
+          College Admissions Guidance
+        </span>
         <div
           style={{
             background: "#b2ffff",
-            maxWidth: "80%",
-            position: "absolute",
-            marginLeft: "300px",
             marginTop: "200px",
+            marginInline: "12%",
+            width: "auto",
+            position: "absolute",
           }}
         >
-          <Stack direction="row" spacing={3}>
-            <div>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Blue",
-                  fontSize: "17px",
-                  fontStyle: "bold",
-                }}
-              >
-                Application Full Package
-              </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Green",
-                  fontSize: "15px",
-                  fontStyle: "bold",
-                  padding: "15px",
-                }}
-              >
-                The whole process, taken <br />
-                care of: from developing ideas <br />
-                in May to final commitment in April.
-                <br />
-                Book now for the 2023 cycle.
-              </p>
+          <Stack direction="row" spacing={1}>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    color: "Blue",
+                  }}
+                >
+                  Application Full Package
+                </h5>
+                <p className="card-text">
+                  The whole process, taken care of from developing ideas in May
+                  to final commitment in April. Book now for the 2023 cycle.
+                </p>
+              </div>
               <Button color="secondary">Our Offers</Button>
             </div>
-            <div>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Blue",
-                  fontSize: "17px",
-                  fontStyle: "bold",
-                }}
-              >
-                Application Essay Help
-              </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Green",
-                  fontSize: "15px",
-                  fontStyle: "bold",
-                  padding: "15px",
-                }}
-              >
-                The individual attention any applicant <br />
-                needs to brainstorm, craft,
-                <br /> and perfect any to all of the <br />
-                required application writings.
-              </p>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    color: "Blue",
+                  }}
+                >
+                  Application Essay Help
+                </h5>
+                <p className="card-text">
+                  The individual attention any applicant needs to brainstorm,
+                  craft, and perfect any to all of the required application
+                  writings
+                </p>
+              </div>
               <Button color="secondary">Our Offers</Button>
             </div>
-            <div>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Blue",
-                  fontSize: "17px",
-                  fontStyle: "bold",
-                }}
-              >
-                On-Demand Counseling
-              </p>
-              <p
-                style={{
-                  textAlign: "center",
-                  color: "Green",
-                  fontSize: "15px",
-                  fontStyle: "bold",
-                  padding: "15px",
-                }}
-              >
-                Insights on application strategy,
-                <br /> campus cultures, college choice, <br /> interview prep,
-                and the rest,
-                <br /> from recent graduates.
-              </p>
+            <div className="card" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <h5
+                  className="card-title"
+                  style={{
+                    color: "Blue",
+                  }}
+                >
+                  On-Demand Counseling
+                </h5>
+                <p className="card-text">
+                  Insights on application strategy, campus cultures, college
+                  choice, interview prep, and the rest, from recent graduates.
+                </p>
+              </div>
               <Button color="secondary">Our Offers</Button>
             </div>
           </Stack>
@@ -207,7 +105,7 @@ function ListGroup() {
           >
             <Stack direction="row" spacing={10}>
               <div>
-                <p
+                <span
                   style={{
                     color: "#ed9121",
                     fontSize: "57px",
@@ -215,10 +113,10 @@ function ListGroup() {
                   }}
                 >
                   Application Full Package
-                </p>
+                </span>
               </div>
               <div>
-                <p
+                <span
                   style={{
                     textAlign: "left",
                     color: "#00008b",
@@ -229,7 +127,7 @@ function ListGroup() {
                   }}
                 >
                   <ul className="list-unstyled">
-                    <li style={{ marginBottom: "10px" }}>
+                    <li style={{ marginBottom: "1px" }}>
                       <span style={{ position: "relative" }}>
                         on-1 meetings with our MBBS graduated mentors from
                         spring-early summer of Grade 11
@@ -261,7 +159,7 @@ function ListGroup() {
                       </span>
                     </li>
                   </ul>
-                </p>
+                </span>
                 <Button variant="contained">Reserve Now</Button>
               </div>
             </Stack>
@@ -284,7 +182,7 @@ function ListGroup() {
           >
             <Stack direction="row" spacing={10}>
               <div>
-                <p
+                <span
                   style={{
                     color: "#ed9121",
                     fontSize: "57px",
@@ -292,10 +190,10 @@ function ListGroup() {
                   }}
                 >
                   Application Essay Help
-                </p>
+                </span>
               </div>
               <div>
-                <p
+                <span
                   style={{
                     textAlign: "left",
                     color: "#f5f5f5",
@@ -330,7 +228,7 @@ function ListGroup() {
                       </span>
                     </li>
                   </ul>
-                </p>
+                </span>
                 <Button variant="contained">Reserve Now</Button>
               </div>
             </Stack>
@@ -347,7 +245,7 @@ function ListGroup() {
             }}
           >
             <div className="card-body">
-              <p
+              <span
                 className="card-text"
                 style={{
                   textAlign: "left",
@@ -381,7 +279,7 @@ function ListGroup() {
                     <span> Long-term partnership with a dedicated mentor</span>
                   </li>
                 </ul>
-              </p>
+              </span>
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
@@ -395,7 +293,7 @@ function ListGroup() {
             }}
           >
             <div className="card-body">
-              <p
+              <span
                 className="card-text"
                 style={{
                   textAlign: "left",
@@ -429,7 +327,7 @@ function ListGroup() {
                     <span> Long-term partnership with a dedicated mentor</span>
                   </li>
                 </ul>
-              </p>
+              </span>
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
@@ -443,7 +341,7 @@ function ListGroup() {
             }}
           >
             <div className="card-body">
-              <p
+              <span
                 className="card-text"
                 style={{
                   textAlign: "left",
@@ -477,7 +375,7 @@ function ListGroup() {
                     <span> Long-term partnership with a dedicated mentor</span>
                   </li>
                 </ul>
-              </p>
+              </span>
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
@@ -488,7 +386,7 @@ function ListGroup() {
           height: "580px",
           width: "auto",
           backgroundImage: `url(${nsp1})`,
-          marginTop: "2400px",
+          marginTop: "1650px",
         }}
       >
         <div
@@ -501,7 +399,7 @@ function ListGroup() {
         >
           <Stack direction="row" spacing={10}>
             <div>
-              <p
+              <span
                 style={{
                   color: "#800080",
                   fontSize: "57px",
@@ -509,10 +407,10 @@ function ListGroup() {
                 }}
               >
                 On-Demand Counseling
-              </p>
+              </span>
             </div>
             <div>
-              <p
+              <span
                 style={{
                   textAlign: "left",
                   color: "#f5f5f5",
@@ -548,13 +446,13 @@ function ListGroup() {
                     <span>Hourly Rate: $150</span>
                   </li>
                 </ul>
-              </p>
+              </span>
               <Button variant="contained">Reserve Now</Button>
             </div>
           </Stack>
         </div>
       </div>
-      <div className="row" style={{ display: "flex", marginTop: "150px" }}>
+      <div className="row" style={{ display: "flex", marginTop: "50px" }}>
         <div
           className="column-md"
           style={{
@@ -573,58 +471,87 @@ function ListGroup() {
               height: 0.5,
             }}
           />
-          <p className="color_15 wixui-rich-text__text" style={mystyle}>
-            Corporate Office :
-            <p
+          <div
+            style={{
+              color: "Black",
+              fontSize: "16px",
+              padding: "15px",
+            }}
+          >
+            <span
+              className="color_15 wixui-rich-text__text"
               style={{
-                color: "Black",
-                fontSize: "16px",
-                padding: "0",
-                marginTop: "12px",
-                marginBottom: "0",
+                color: "Blue",
+                fontSize: "20px",
               }}
             >
-              Tashkent, Uzbekistan.
-            </p>
-          </p>
-          <p className="color_15 wixui-rich-text__text" style={mystyle}>
-            India Office :
-            <p
+              Corporate Office :
+              <span
+                style={{
+                  color: "Black",
+                  fontSize: "16px",
+                  padding: "15px",
+                }}
+              >
+                Tashkent, Uzbekistan.
+              </span>
+            </span>
+          </div>
+          <div>
+            <span
+              className="color_15 wixui-rich-text__text"
               style={{
-                color: "Black",
-                fontSize: "16px",
-                padding: "0",
-                marginTop: "12px",
-                marginBottom: "0",
+                color: "Blue",
+                fontSize: "20px",
+                padding: "15px",
               }}
             >
-              Address: Keas 69 Str. 15234, New Delhi, India.
-              <br /> +30-2106019311 (landline) <br />
-              +30-6977664062 (mobile phone) <br />
-              +30-2106398905 (fax)
-            </p>
-          </p>
+              India Office :
+              <span
+                className="color_15 wixui-rich-text__text"
+                style={{
+                  color: "Black",
+                  fontSize: "16px",
+                  paddingLeft: "10px",
+                }}
+              >
+                Address: Keas 69 Str. 15234, New Delhi, India.
+                <p
+                  style={{
+                    paddingLeft: "15px",
+                  }}
+                >
+                  +30-2106019311 (landline) +30-6977664062 (mobile phone)
+                </p>
+                <p
+                  style={{
+                    paddingLeft: "15px",
+                  }}
+                >
+                  +30-2106398905 (fax)
+                </p>
+              </span>
+            </span>
+          </div>
         </div>
       </div>
-      <div>
-        <p
+      <div
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <span
           className="color_15 wixui-rich-text__text"
           style={{
             color: "#5f3799",
             fontSize: "20px",
-            padding: "0",
-            marginTop: "12px",
-            marginBottom: "0",
-            position: "relative",
-            alignItems: "center",
-            textAlign: "center",
           }}
         >
           <FaCopyright /> Akros Consultancy Services
-        </p>
+        </span>
       </div>
     </>
   );
 }
 
-export default ListGroup;
+export default AdmissionForm;

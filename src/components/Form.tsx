@@ -30,6 +30,16 @@ const ContactForm = () => {
 
   return (
     <form className="cf" ref={form} onSubmit={sendEmail}>
+      <div
+        style={{
+          color: "Blue",
+          fontSize: "40px",
+          paddingBottom: "40px",
+          paddingTop: "0px",
+        }}
+      >
+        Contact Us
+      </div>
       <label>Name</label>
       <input type="text" name="user_name" required />
       <label>Email</label>
