@@ -4,6 +4,8 @@ import vitaliy from "../assets/vitaliy.jpg";
 import RecipeReviewCard from "./Card";
 import Paper from "@mui/material/Paper";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import uzbekflag from "../assets/Flag_Uzbek.png";
+import kazakflag from "../assets/kazak flag.png";
 import FeesCard from "./FeesCard";
 
 const HomePage = () => {
@@ -71,14 +73,21 @@ const HomePage = () => {
             <br /> The skills to succeed in the application process and after.
           </Text>
         </GridItem>
-        <GridItem area={"footer"} colStart={1} colEnd={5}>
-          <RecipeReviewCard />
+        <GridItem area={"footer"} colStart={1} colEnd={7}>
+          <RecipeReviewCard
+            image={uzbekflag}
+            name={"U"}
+            title={"Uzbekistan"}
+            subheader={"Country in Central Asia"}
+          />
         </GridItem>
-        <GridItem area={"footer"} colStart={5} colEnd={9}>
-          <RecipeReviewCard />
-        </GridItem>
-        <GridItem area={"footer"} colStart={9} colEnd={13}>
-          <RecipeReviewCard />
+        <GridItem area={"footer"} colStart={7} colEnd={13}>
+          <RecipeReviewCard
+            image={kazakflag}
+            name={"K"}
+            title={"Kazakhstan"}
+            subheader={"Country in Central Asia"}
+          />
         </GridItem>
         <GridItem area={"bottom"} colStart={2} colEnd={12}>
           <Paper elevation={1}>
