@@ -4,17 +4,20 @@ import vitaliy from "../assets/vitaliy.jpg";
 import RecipeReviewCard from "./Card";
 import Paper from "@mui/material/Paper";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import FeesCard from "./FeesCard";
 
 const HomePage = () => {
   return (
     <>
       <Grid
         templateColumns="repeat(12, 1fr)"
-        templateRows="repeat(4, auto)"
+        templateRows="repeat(6, auto)"
         templateAreas={`"header1 header2"
                   "main main"
                   "footer footer"
-                  "bottom bottom"`}
+                  "bottom bottom"
+                  "bottom1 bottom1"
+                  "bottom2 bottom2"`}
         gap="4"
       >
         <GridItem area={"header1"} colStart={2} colEnd={8}>
@@ -146,7 +149,64 @@ const HomePage = () => {
             <Typography variant="h5" m={2} textAlign={"left"}>
               Admission Process for Studying MBBS Overseas
             </Typography>
+            <Typography variant="overline" display="block" marginX={2}>
+              Applicants are required to select their preferred MBBS University
+              and fill out the online international student application form to
+              start his admission process.Candidates would be required to upload
+              a set of documents as part of the application procedure to further
+              strengthen their academic profile. These include:
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Class 10th and 12th report card
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              School Leaving & School Migration Certificate
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              NEET Score Card
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Personal Financial Statements
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Medical Certificate
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Passport Size Photographs
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Letter of Recommendation
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              On the successful submission of your online application form,
+              candidates would hear back from the university with an admission
+              letter & Fees Details.
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Pay the application fee.
+            </Typography>
+            <Typography variant="overline" display="block" marginX={4}>
+              <ArrowRightIcon style={{ position: "relative", top: "8px" }} />
+              Applicants would be then required to send their passport along
+              with their original documents and their letter of acceptance to
+              the concerned embassy to apply for their student visa.
+            </Typography>
           </Paper>
+        </GridItem>
+        <GridItem area={"bottom1"} colStart={2} colEnd={12}>
+          <FeesCard />
+        </GridItem>
+        <GridItem area={"bottom2"} colStart={2} colEnd={12}>
+          <FeesCard />
         </GridItem>
       </Grid>
     </>
