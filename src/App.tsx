@@ -5,6 +5,7 @@ import OurTeamPage from "./components/Team";
 import HomePage from "./components/Home";
 import HeaderPage from "./components/Header";
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
