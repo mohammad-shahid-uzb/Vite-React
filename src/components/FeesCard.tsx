@@ -1,22 +1,23 @@
-import Card from "@mui/material/Card";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
 import Tables from "./Table";
 
 export default function FeesCard(props) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <h1>Uzbekistan</h1>
+        <h1>{props.country}</h1>
         <Typography>
-          Study in Russia - High quality of medical education combined with low
-          tuition fees is one of the prime reasons for students to pursue an
-          MBBS from Russia. The average MBBS tuition fee in Russia is INR 2.14
-          Lakhs and the average living expenses stand at INR 42,800 for a single
-          year.
+          Study in {props.country} - High quality of medical education combined
+          with low tuition fees is one of the prime reasons for students to
+          pursue an MBBS from {props.country}. The <strong>Average </strong>MBBS
+          tuition fee in {props.country} is INR {props.yearFees} Lakhs and the{" "}
+          <strong>Average </strong> living & food expenses stand at INR{" "}
+          {props.hostelExp} lakh for a single year.
         </Typography>
         <Tables data={props} />
       </CardContent>

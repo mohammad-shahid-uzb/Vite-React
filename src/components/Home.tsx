@@ -20,13 +20,41 @@ const HomePage = () => {
       "MBBS 6 years",
       "USD 3200"
     ),
-    createData("Andijan State Medical Institute", "MBBS 6 years", "USD 3200"),
+    createData("Andijan State Medical Institute", "MBBS 6 years", "USD 3500"),
     createData(
       "Fergana Medical Institute Of Public Health",
       "MBBS 6 years",
       "USD 3200"
     ),
-    createData("Bukhara State Medical University", "MBBS 6 years", "USD 5500"),
+    createData("Bukhara State Medical University", "MBBS 6 years", "USD 3500"),
+  ];
+
+  const rows2 = [
+    createData(
+      "Kazakh National Medical University",
+      "MBBS 5 Years Without Internship",
+      "USD 3800"
+    ),
+    createData(
+      "Astana Medical University",
+      "MBBS 5 Years Without Internship",
+      "USD 3700"
+    ),
+    createData(
+      "Semey State Medical University",
+      "MBBS 5 Years Without Internship",
+      "USD 3800"
+    ),
+    createData(
+      "International Medical School(IMS) Almaty",
+      "MBBS 5 Years Without Internship",
+      "USD 3600"
+    ),
+    createData(
+      "Karaganda State Medical University",
+      "MBBS 5 Years Without Internship",
+      "USD 3800"
+    ),
   ];
 
   return (
@@ -127,16 +155,21 @@ const HomePage = () => {
             }
           />
         </GridItem>
-        <GridItem area={"bottom"} colStart={2} colEnd={12} padding={10}>
+        <GridItem area={"bottom"} colStart={2} colEnd={12} padding={5}>
           <Paper elevation={1}>
-            <Typography variant="h3" mt={5} textAlign={"center"}>
+            <Typography
+              variant="h3"
+              marginTop={2}
+              textAlign={"center"}
+              paddingTop={5}
+            >
               MBBS AND ITS IMPORTANCE
             </Typography>
             <Typography
+              textAlign={"justify"}
               variant="overline"
               display="block"
               mx={5}
-              textAlign={"justify"}
             >
               MBBS stands for Bachelor of Medicine and Bachelor of
               Surgery.Medical Science is a very fascinating subject as it is the
@@ -313,11 +346,21 @@ const HomePage = () => {
             </Typography>
           </Paper>
         </GridItem>
-        <GridItem area={"bottom1"} colStart={2} colEnd={12}>
-          <FeesCard data={rows1} />
+        <GridItem area={"bottom1"} colStart={2} colEnd={12} marginY={5}>
+          <FeesCard
+            data={rows1}
+            country={"Uzbekistan"}
+            yearFees={"2.65"}
+            hostelExp={"2.00"}
+          />
         </GridItem>
-        <GridItem area={"bottom2"} colStart={2} colEnd={12}>
-          <FeesCard data={rows1} />
+        <GridItem area={"bottom2"} colStart={2} colEnd={12} marginY={5}>
+          <FeesCard
+            data={rows2}
+            country={"Kazakhstan"}
+            yearFees={"3.20"}
+            hostelExp={"2.50"}
+          />
         </GridItem>
       </Grid>
     </>
