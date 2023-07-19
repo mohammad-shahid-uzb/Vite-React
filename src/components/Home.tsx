@@ -79,6 +79,15 @@ const HomePage = () => {
             name={"U"}
             title={"Uzbekistan"}
             subheader={"Country in Central Asia"}
+            subheader2={
+              "Uzbekistan is a central Asian country that became independent in 1991." +
+              "In accordance with the Decree of the President" +
+              "of the Republic of Uzbekistan, the duration of" +
+              "the educational field of General Medicine is set at 6 years." +
+              "Indian students are fully enrolled in 6-year “Therapeutic Workprograms." +
+              "The 6-year program meets all the requirements established" +
+              "by the National Medical Commission of India (duration of training and periods allotted for practice). "
+            }
           />
         </GridItem>
         <GridItem area={"footer"} colStart={7} colEnd={13}>
@@ -87,6 +96,15 @@ const HomePage = () => {
             name={"K"}
             title={"Kazakhstan"}
             subheader={"Country in Central Asia"}
+            subheader2={
+              " Medical education in Kazakhstan has been literally" +
+              " transformed in the past 10 years. Kazakhstan inherited" +
+              " the Soviet-time discipline-based teacher-centered" +
+              " system of education when no decisions could be made independently." +
+              " The curriculum was mostly governed in a traditional way," +
+              " with lectures being the core, little use of e-learning tools," +
+              " and assessment through oral exams and multiple-choice questions."
+            }
           />
         </GridItem>
         <GridItem area={"bottom"} colStart={2} colEnd={12} padding={10}>
