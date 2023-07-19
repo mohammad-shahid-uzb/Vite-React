@@ -10,7 +10,7 @@ export default function FeesCard(props) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <h1>Russia</h1>
+        <h1>Uzbekistan</h1>
         <Typography>
           Study in Russia - High quality of medical education combined with low
           tuition fees is one of the prime reasons for students to pursue an
