@@ -91,7 +91,7 @@ const HomePage = () => {
         </GridItem>
         <GridItem area={"bottom"} colStart={2} colEnd={12} padding={10}>
           <Paper elevation={1}>
-            <Typography variant="h3" marginTop={5} textAlign={"center"}>
+            <Typography variant="h3" mt={5} textAlign={"center"}>
               MBBS AND ITS IMPORTANCE
             </Typography>
             <Typography
