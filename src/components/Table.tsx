@@ -27,39 +27,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name: string, CourseDetails: string, Tuition: string) {
-  return { name, CourseDetails, Tuition };
-}
-
-const rows = [
-  createData(
-    "Belgorod National Research University (BelSu)",
-    "MBBS 5.5 Years",
-    "USD 6000"
-  ),
-  createData(
-    "The Orenburg State Medical University",
-    "Doctor of Medicine 6 years",
-    "USD 5500"
-  ),
-  createData(
-    "Bashkir State Medical University",
-    "Doctor of Medicine 6 years",
-    "USD 5500"
-  ),
-  createData(
-    "Bashkir State Medical University",
-    "Doctor of Medicine 6 years",
-    "USD 5500"
-  ),
-  createData(
-    "Bashkir State Medical University",
-    "Doctor of Medicine 6 years",
-    "USD 5500"
-  ),
-];
-
-export default function Tables() {
+export default function Tables(props) {
+  const data = props.data.data;
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -73,7 +42,7 @@ export default function Tables() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {data.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">
                 {row.name}

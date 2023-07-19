@@ -8,7 +8,27 @@ import uzbekflag from "../assets/Flag_Uzbek.png";
 import kazakflag from "../assets/kazak flag.png";
 import FeesCard from "./FeesCard";
 
+function createData(name: string, CourseDetails: string, Tuition: string) {
+  return { name, CourseDetails, Tuition };
+}
+
 const HomePage = () => {
+  const rows1 = [
+    createData("Tashkent Medical Academy", "MBBS 6 Years", "USD 3200"),
+    createData(
+      "Samarkand State Medical University",
+      "MBBS 6 years",
+      "USD 3200"
+    ),
+    createData("Andijan State Medical Institute", "MBBS 6 years", "USD 3200"),
+    createData(
+      "Fergana Medical Institute Of Public Health",
+      "MBBS 6 years",
+      "USD 3200"
+    ),
+    createData("Bukhara State Medical University", "MBBS 6 years", "USD 5500"),
+  ];
+
   return (
     <>
       <Grid
@@ -294,10 +314,10 @@ const HomePage = () => {
           </Paper>
         </GridItem>
         <GridItem area={"bottom1"} colStart={2} colEnd={12}>
-          <FeesCard />
+          <FeesCard data={rows1} />
         </GridItem>
         <GridItem area={"bottom2"} colStart={2} colEnd={12}>
-          <FeesCard />
+          <FeesCard data={rows1} />
         </GridItem>
       </Grid>
     </>

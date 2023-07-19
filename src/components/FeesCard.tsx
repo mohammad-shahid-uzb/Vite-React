@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import Tables from "./Table";
 
-export default function FeesCard() {
+export default function FeesCard(props) {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -18,7 +18,7 @@ export default function FeesCard() {
           Lakhs and the average living expenses stand at INR 42,800 for a single
           year.
         </Typography>
-        <Tables />
+        <Tables data={props} />
       </CardContent>
       <CardActions>
         <Typography>
