@@ -89,12 +89,17 @@ const HomePage = () => {
             subheader={"Country in Central Asia"}
           />
         </GridItem>
-        <GridItem area={"bottom"} colStart={2} colEnd={12}>
+        <GridItem area={"bottom"} colStart={2} colEnd={12} padding={10}>
           <Paper elevation={1}>
-            <Typography variant="h3" m={2} textAlign={"center"}>
+            <Typography variant="h3" marginTop={5} textAlign={"center"}>
               MBBS AND ITS IMPORTANCE
             </Typography>
-            <Typography variant="overline" display="block" m={2}>
+            <Typography
+              variant="overline"
+              display="block"
+              mx={5}
+              textAlign={"justify"}
+            >
               MBBS stands for Bachelor of Medicine and Bachelor of
               Surgery.Medical Science is a very fascinating subject as it is the
               study of human anatomy.The degree is the step towards becoming a
@@ -104,7 +109,66 @@ const HomePage = () => {
               years back.Why so? A limited number of government colleges seats
               coupled with exorbitant tuition fees levied by private medical
               colleges have pushed a certain section of Indian students to
-              pursue MBBS abroad.
+              pursue MBBS abroad.MBBS (Bachelor of Medicine, Bachelor of
+              Surgery) course remains highly important and significant in
+              today's time. This degree is awarded to individuals who complete
+              their undergraduate medical education and training, which is the
+              first step towards becoming a licensed medical practitioner.
+              <br />
+              <h4>
+                Here are some reasons why the MBBS course continues to be
+                relevant and vital:
+              </h4>
+              Foundation of Medical Education: The MBBS course lays the
+              foundation for medical education, providing students with
+              essential knowledge in anatomy, physiology, pathology,
+              pharmacology, and other fundamental medical sciences. This forms
+              the basis for further specialization and advanced medical studies.
+              <br />
+              <h4>Clinical Skills Development:</h4> During the course, students
+              gain hands-on experience in clinical settings, helping them
+              develop practical skills, diagnose illnesses, and treat patients
+              under supervision. This exposure is crucial for building competent
+              medical professionals. Medical Licensing: To practice medicine
+              legally and ethically, individuals must be licensed. The MBBS
+              degree is a prerequisite for medical licensing in most countries,
+              allowing graduates to pursue residency programs and become
+              licensed physicians. Specialization and Postgraduate Studies: Many
+              medical specialties and sub-specialties require candidates to have
+              an MBBS degree as a minimum qualification. After completing their
+              MBBS, graduates can pursue further studies and specialize in areas
+              like cardiology, surgery, pediatrics, oncology, etc. <br />
+              <h4>Public Health and Preventive Medicine: </h4>The MBBS
+              curriculum includes education about public health and preventive
+              medicine. With increasing global health challenges, medical
+              professionals are needed to address public health issues,
+              epidemics, and health promotion. Healthcare Industry: Medical
+              professionals, especially general practitioners, form the backbone
+              of the healthcare industry. They play a crucial role in primary
+              care, diagnosing and treating various health conditions, and
+              referring patients to specialists when needed.
+              <h4> Medical Research and Innovation:</h4> MBBS graduates can
+              contribute to medical research and innovation. They often become
+              part of research teams, work on clinical trials, and contribute to
+              medical advancements that benefit society. Humanitarian and Global
+              Health Work: An MBBS degree opens doors for medical professionals
+              to participate in humanitarian work and global health initiatives.
+              They can provide medical aid in underserved areas,
+              disaster-stricken regions, or countries facing health crises.
+              <h4> Personal and Professional Growth:</h4> The rigorous training
+              and challenges of the MBBS course promote personal growth,
+              empathy, and resilience in aspiring doctors, equipping them to
+              handle the emotional demands of patient care.
+              <h4>Community Impact:</h4>
+              Medical professionals have a significant impact on the lives of
+              individuals and communities they serve. The MBBS course prepares
+              them to provide medical care, improve health outcomes, and enhance
+              the overall well-being of people. In conclusion, the MBBS course
+              remains essential in contemporary times as it lays the groundwork
+              for medical practice, allows for specialization and postgraduate
+              studies, contributes to healthcare, research, and innovation, and
+              prepares medical professionals to address a range of
+              health-related challenges in society.
             </Typography>
             <Typography variant="h4" m={2} textAlign={"center"}>
               MBBS ABROAD (Eligibility Criteria)
