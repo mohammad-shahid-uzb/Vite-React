@@ -1,5 +1,5 @@
-const SeminarPage = () => {
-  return <div> SeminarPage</div>;
-};
+import Box from "@mui/material/Box";
 
-export default SeminarPage;
+export default function SeminarPage() {
+  return <Box sx={{ display: "flex" }}>Seminars</Box>;
+}

@@ -1,5 +1,26 @@
-import { Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import * as React from "react";
+import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import MuiDrawer from "@mui/material/Drawer";
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import List from "@mui/material/List";
+import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import CottageIcon from "@mui/icons-material/Cottage";
+import SchoolIcon from "@mui/icons-material/School";
+import { Image, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import Logo from "../assets/akros_trans.png";
 import vitaliy from "../assets/vitaliy.jpg";
 import RecipeReviewCard from "./Card";
 import Paper from "@mui/material/Paper";
@@ -7,12 +28,96 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import uzbekflag from "../assets/Flag_Uzbek.png";
 import kazakflag from "../assets/kazak flag.png";
 import FeesCard from "./FeesCard";
+import Stack from "@mui/material/Stack";
+import Card from "@mui/material/Card";
+
+const drawerWidth = 240;
+
+const openedMixin = (theme: Theme): CSSObject => ({
+  width: drawerWidth,
+  transition: theme.transitions.create("width", {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.enteringScreen,
+  }),
+  overflowX: "hidden",
+});
+
+const closedMixin = (theme: Theme): CSSObject => ({
+  transition: theme.transitions.create("width", {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  overflowX: "hidden",
+  width: `calc(${theme.spacing(7)} + 1px)`,
+  [theme.breakpoints.up("sm")]: {
+    width: `calc(${theme.spacing(8)} + 1px)`,
+  },
+});
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+}));
+
+interface AppBarProps extends MuiAppBarProps {
+  open?: boolean;
+}
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})<AppBarProps>(({ theme, open }) => ({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(["width", "margin"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
+
+const Drawer = styled(MuiDrawer, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  width: drawerWidth,
+  flexShrink: 0,
+  whiteSpace: "nowrap",
+  boxSizing: "border-box",
+  ...(open && {
+    ...openedMixin(theme),
+    "& .MuiDrawer-paper": openedMixin(theme),
+  }),
+  ...(!open && {
+    ...closedMixin(theme),
+    "& .MuiDrawer-paper": closedMixin(theme),
+  }),
+}));
 
 function createData(name: string, CourseDetails: string, Tuition: string) {
   return { name, CourseDetails, Tuition };
 }
 
-const HomePage = () => {
+export default function SeminarPage() {
+  const theme = useTheme();
+  const navigate = useNavigate();
+  const [open, setOpen] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   const rows1 = [
     createData("Tashkent Medical Academy", "MBBS 6 Years", "USD 3200"),
     createData(
@@ -56,50 +161,158 @@ const HomePage = () => {
       "USD 3800"
     ),
   ];
+  const Item = styled(Card)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+  }));
 
   return (
-    <>
-      <Grid
-        templateColumns="repeat(12, 1fr)"
-        templateRows="repeat(6, auto)"
-        templateAreas={`"header1 header2"
-                  "main main"
-                  "footer footer"
-                  "bottom bottom"
-                  "bottom1 bottom1"
-                  "bottom2 bottom2"`}
-        gap="4"
-      >
-        <GridItem area={"header1"} colStart={2} colEnd={8}>
-          <Text
-            color="#4caf50"
-            fontSize="60"
-            fontWeight="extrabold"
-            lineHeight="100%"
-            fontFamily={"Slab Serif "}
-            textAlign={["left"]}
-            paddingTop={"100"}
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <AppBar position="fixed" open={open} color={"transparent"}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{
+              marginRight: 4,
+              ...(open && { display: "none" }),
+            }}
           >
-            Akros <br />
-            Consultancy <br /> Services
-          </Text>
-          <Text
-            color="#0892d0"
-            fontSize="20"
-            fontWeight="extrabold"
-            fontFamily={"Slab Serif"}
-            lineHeight="150%"
-            textAlign={["left"]}
+            <MenuIcon />
+          </IconButton>
+          <Image src={Logo} height={"70"} verticalAlign={"Center"} />
+          <Box>
+            <Typography
+              variant="button"
+              sx={{
+                textDecoration: "underline",
+                fontWeight: "bold",
+                textAlign: "center",
+              }}
+              color="Blue"
+            >
+              Akros Consultancy Services
+            </Typography>
+            <Typography
+              textAlign={"justify"}
+              variant="subtitle2"
+              sx={{ textAlign: "left" }}
+            >
+              Uzbekistan-Kazakhstan
+            </Typography>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Drawer variant="permanent" open={open}>
+        <DrawerHeader>
+          <IconButton
+            onClick={handleDrawerClose}
+            sx={{
+              marginRight: 1,
+              marginTop: 1,
+            }}
           >
-            We help highly motivated international students gain admission{" "}
-            <br />
-            to and succeed at the best colleges in the Uzbeksitan & Kazakhstan.
-          </Text>
-        </GridItem>
-        <GridItem area={"header2"} colStart={8} colEnd={12}>
-          <Image src={vitaliy} alt="home" width={"100%"} height={"100%"} />
-        </GridItem>
-        <GridItem area={"main"} colStart={2} colEnd={12}>
+            {theme.direction === "rtl" ? (
+              <ChevronRightIcon />
+            ) : (
+              <ChevronLeftIcon />
+            )}
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <List>
+          {["home", "admissions", "seminars", "team", "resources"].map(
+            (text, index) => (
+              <ListItem key={text} disablePadding sx={{ display: "block" }}>
+                <ListItemButton
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5,
+                  }}
+                  onClick={() => navigate(`/${text}`)}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : "auto",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {index % 2 === 0 ? <CottageIcon /> : <SchoolIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
+        </List>
+        <Divider />
+        {/* <List>
+          {["All mail", "Trash", "Spam"].map((text, index) => (
+            <ListItem key={text} disablePadding sx={{ display: "block" }}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? "initial" : "center",
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : "auto",
+                    justifyContent: "center",
+                  }}
+                >
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List> */}
+      </Drawer>
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+        <DrawerHeader />
+        <>
+          <Stack direction="row" spacing={1} justifyContent="center">
+            <Item>
+              <Text
+                color="#4caf50"
+                fontSize="60"
+                fontWeight="extrabold"
+                lineHeight="100%"
+                fontFamily={"Slab Serif "}
+                textAlign={["left"]}
+                paddingLeft={"60"}
+                paddingTop={"50"}
+              >
+                Akros <br />
+                Consultancy <br /> Services
+              </Text>
+              <Text
+                color="#0892d0"
+                fontSize="20"
+                fontWeight="extrabold"
+                fontFamily={"Slab Serif"}
+                lineHeight="150%"
+                textAlign={["left"]}
+                paddingLeft={"60"}
+              >
+                We help highly motivated international students gain admission{" "}
+                <br />
+                to and succeed at the best colleges in the Uzbeksitan &
+                Kazakhstan.
+              </Text>
+            </Item>
+            <Item>
+              <Image src={vitaliy} alt="home" width={"auto"} />
+            </Item>
+          </Stack>
           <Text
             color="#4caf50"
             fontSize="42"
@@ -120,48 +333,46 @@ const HomePage = () => {
             Online application and counseling for students wherever they are.
             <br /> The skills to succeed in the application process and after.
           </Text>
-        </GridItem>
-        <GridItem area={"footer"} colStart={1} colEnd={7}>
-          <RecipeReviewCard
-            image={uzbekflag}
-            name={"U"}
-            title={"Uzbekistan"}
-            subheader={"Country in Central Asia"}
-            subheader2={
-              "Uzbekistan is a central Asian country that became independent in 1991." +
-              "In accordance with the Decree of the President" +
-              "of the Republic of Uzbekistan, the duration of" +
-              "the educational field of General Medicine is set at 6 years." +
-              "Indian students are fully enrolled in 6-year “Therapeutic Workprograms." +
-              "The 6-year program meets all the requirements established" +
-              "by the National Medical Commission of India (duration of training and periods allotted for practice). "
-            }
-          />
-        </GridItem>
-        <GridItem area={"footer"} colStart={7} colEnd={13}>
-          <RecipeReviewCard
-            image={kazakflag}
-            name={"K"}
-            title={"Kazakhstan"}
-            subheader={"Country in Central Asia"}
-            subheader2={
-              " Medical education in Kazakhstan has been literally" +
-              " transformed in the past 10 years. Kazakhstan inherited" +
-              " the Soviet-time discipline-based teacher-centered" +
-              " system of education when no decisions could be made independently." +
-              " The curriculum was mostly governed in a traditional way," +
-              " with lectures being the core, little use of e-learning tools," +
-              " and assessment through oral exams and multiple-choice questions."
-            }
-          />
-        </GridItem>
-        <GridItem area={"bottom"} colStart={2} colEnd={12} padding={5}>
+          <Stack direction="row" spacing={1} justifyContent="center">
+            <RecipeReviewCard
+              image={kazakflag}
+              name={"K"}
+              title={"Kazakhstan"}
+              subheader={"Country in Central Asia"}
+              subheader2={
+                " Medical education in Kazakhstan has been literally" +
+                " transformed in the past 10 years. Kazakhstan inherited" +
+                " the Soviet-time discipline-based teacher-centered" +
+                " system of education when no decisions could be made independently." +
+                " The curriculum was mostly governed in a traditional way," +
+                " with lectures being the core, little use of e-learning tools," +
+                " and assessment through oral exams and multiple-choice questions."
+              }
+            />
+            <RecipeReviewCard
+              image={uzbekflag}
+              name={"U"}
+              title={"Uzbekistan"}
+              subheader={"Country in Central Asia"}
+              subheader2={
+                "Uzbekistan is a central Asian country that became independent in 1991." +
+                "In accordance with the Decree of the President" +
+                "of the Republic of Uzbekistan, the duration of" +
+                "the educational field of General Medicine is set at 6 years." +
+                "Indian students are fully enrolled in 6-year “Therapeutic Workprograms." +
+                "The 6-year program meets all the requirements established" +
+                "by the National Medical Commission of India (duration of training and periods allotted for practice). "
+              }
+            />
+          </Stack>
           <Paper elevation={1}>
             <Typography
-              variant="h3"
+              variant="h4"
               marginTop={2}
               textAlign={"center"}
               paddingTop={5}
+              sx={{ textDecoration: "underline", fontWeight: "bold" }}
+              color="#FF6347"
             >
               MBBS AND ITS IMPORTANCE
             </Typography>
@@ -345,26 +556,20 @@ const HomePage = () => {
               the concerned embassy to apply for their student visa.
             </Typography>
           </Paper>
-        </GridItem>
-        <GridItem area={"bottom1"} colStart={2} colEnd={12} marginY={5}>
           <FeesCard
             data={rows1}
             country={"Uzbekistan"}
             yearFees={"2.65"}
             hostelExp={"2.00"}
           />
-        </GridItem>
-        <GridItem area={"bottom2"} colStart={2} colEnd={12} marginY={5}>
           <FeesCard
             data={rows2}
             country={"Kazakhstan"}
             yearFees={"3.20"}
             hostelExp={"2.50"}
           />
-        </GridItem>
-      </Grid>
-    </>
+        </>
+      </Box>
+    </Box>
   );
-};
-
-export default HomePage;
+}

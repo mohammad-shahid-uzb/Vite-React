@@ -37,7 +37,7 @@ export default function RecipeReviewCard(props) {
     setExpanded(!expanded);
   };
   return (
-    <Card sx={{ maxWidth: "auto" }}>
+    <Card sx={{ maxWidth: "550px" }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
