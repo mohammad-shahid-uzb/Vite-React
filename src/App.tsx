@@ -1,10 +1,9 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import AdmissionForm from "./components/Admission";
 import ResourcePage from "./components/ResourcePage";
 import SeminarPage from "./components/Seminars";
 import OurTeamPage from "./components/Team";
 import HomePage from "./components/Home";
-import { Navigate, Route, Routes } from "react-router-dom";
-
 import "./App.css";
 
 function App() {
