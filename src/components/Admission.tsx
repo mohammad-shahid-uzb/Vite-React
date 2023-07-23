@@ -24,14 +24,11 @@ import nsp from "../assets/nsplsh.jpg";
 import nsp1 from "../assets/nsp1.jpg";
 import uzb from "../assets/uzb.jpg";
 import ipad from "../assets/iPad.jpg";
-import door from "../assets/2006.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import ContactForm from "./Form";
 import { FaCopyright } from "react-icons/fa";
 import Typography from "@mui/material/Typography";
-
-import "./Admission.css";
 
 const drawerWidth = 240;
 
@@ -427,13 +424,6 @@ export default function AdmissionForm() {
               </Stack>
             </div>
           </div>
-          <Stack
-            direction="row"
-            spacing={1}
-            padding={5}
-            justifyContent="center"
-            textAlign="center"
-          ></Stack>
           <div
             style={{
               height: "580px",
@@ -496,94 +486,19 @@ export default function AdmissionForm() {
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
-          <div className="row" style={{ display: "flex", marginTop: "50px" }}>
-            <div
-              style={{
-                marginLeft: "90px",
-                marginRight: "100px",
-                width: "450px",
-              }}
-            >
-              <img src={door} height={"950px"} width={"450px"} />
-            </div>
-            <div
-              className="column"
-              style={{ height: "1000px", width: "450px" }}
-            >
-              <ContactForm />
-              <hr
-                style={{
-                  backgroundColor: "black",
-                  height: 0.5,
-                }}
-              />
-              <div
-                style={{
-                  color: "Black",
-                  fontSize: "16px",
-                  padding: "15px",
-                }}
-              >
-                <span
-                  className="color_15 wixui-rich-text__text"
-                  style={{
-                    color: "Blue",
-                    fontSize: "20px",
-                  }}
-                >
-                  Corporate Office :
-                  <span
-                    style={{
-                      color: "Black",
-                      fontSize: "16px",
-                      padding: "15px",
-                    }}
-                  >
-                    Tashkent, Uzbekistan.
-                  </span>
-                </span>
-              </div>
-              <div>
-                <span
-                  className="color_15 wixui-rich-text__text"
-                  style={{
-                    color: "Blue",
-                    fontSize: "20px",
-                    padding: "15px",
-                  }}
-                >
-                  India Office :
-                  <span
-                    className="color_15 wixui-rich-text__text"
-                    style={{
-                      color: "Black",
-                      fontSize: "16px",
-                      paddingLeft: "10px",
-                    }}
-                  >
-                    Address: Keas 69 Str. 15234, New Delhi, India.
-                    <p
-                      style={{
-                        paddingLeft: "15px",
-                      }}
-                    >
-                      +30-2106019311 (landline) +30-6977664062 (mobile phone)
-                    </p>
-                    <p
-                      style={{
-                        paddingLeft: "15px",
-                      }}
-                    >
-                      +30-2106398905 (fax)
-                    </p>
-                  </span>
-                </span>
-              </div>
-            </div>
+          <div
+            style={{
+              marginTop: "50px",
+              justifyContent: "right",
+              textAlign: "center",
+            }}
+          >
+            <ContactForm />
           </div>
           <div
             style={{
               textAlign: "center",
+              marginTop: "10px",
             }}
           >
             <span

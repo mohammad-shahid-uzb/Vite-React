@@ -30,7 +30,6 @@ import Stack from "@mui/material/Stack";
 import ContactForm from "./Form";
 import Typography from "@mui/material/Typography";
 import { FaCopyright } from "react-icons/fa";
-import "./Admission.css";
 
 const drawerWidth = 240;
 
@@ -560,7 +559,13 @@ export default function SeminarPage() {
                       paddingLeft: "10px",
                     }}
                   >
-                    Address: Keas 69 Str. 15234, New Delhi, India.
+                    <p
+                      style={{
+                        paddingLeft: "15px",
+                      }}
+                    >
+                      Address:Keas 69 Str. 15234, New Delhi, India.
+                    </p>
                     <p
                       style={{
                         paddingLeft: "15px",
