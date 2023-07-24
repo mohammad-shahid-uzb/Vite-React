@@ -21,13 +21,13 @@ import SchoolIcon from "@mui/icons-material/School";
 import { Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/akros_trans.png";
-import "./Team.css";
-import Member1 from "../Assets/Member1.jpg";
-import Member2 from "../Assets/Member2.jpg";
+import Member1 from "../Assets/Member1.png";
+import Member2 from "../Assets/Member2.png";
 import Member3 from "../Assets/Member3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import "./Team.css";
 
 const drawerWidth = 240;
 
