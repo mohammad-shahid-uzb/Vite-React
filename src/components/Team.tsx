@@ -27,7 +27,7 @@ import Member3 from "../Assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-import "./Team.css";
+//import "./Team.css";
 
 const drawerWidth = 240;
 
