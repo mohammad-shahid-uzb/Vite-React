@@ -22,8 +22,8 @@ import { Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/akros_trans.png";
 //import Member1 from "../Assets/image1.png";
-import Member2 from "../Assets/image2.png";
-import Member3 from "../Assets/image3.png";
+//import Member2 from "../Assets/image2.png";
+//import Member3 from "../Assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -223,7 +223,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Member2} />
+                <Image width={400} src={Logo} />
                 <div className="description">
                   <h1>Omar Nadir</h1>
                   <h2>CEO</h2>
@@ -240,7 +240,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Member3} />
+                <Image width={400} src={Logo} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>
