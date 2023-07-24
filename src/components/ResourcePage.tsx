@@ -31,6 +31,7 @@ import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
 import MainTeam from "./MainTeam";
 import Sidebar from "./Sidebar";
+import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
 
@@ -290,6 +291,7 @@ export default function ResourcePage() {
               </main>
             </Container>
           </ThemeProvider>
+          <AddressCard />
         </>
       </Box>
     </Box>

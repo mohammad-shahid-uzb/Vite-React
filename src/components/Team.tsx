@@ -28,6 +28,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import "./Team.css";
+import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
 
@@ -275,6 +276,7 @@ export default function OurTeamPage() {
               </div>
             </div>
           </div>
+          <AddressCard />
         </>
       </Box>
     </Box>

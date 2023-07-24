@@ -29,6 +29,7 @@ import Stack from "@mui/material/Stack";
 import ContactForm from "./Form";
 import { FaCopyright } from "react-icons/fa";
 import Typography from "@mui/material/Typography";
+import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
 
@@ -486,31 +487,7 @@ export default function AdmissionForm() {
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
-          <div
-            style={{
-              marginTop: "50px",
-              justifyContent: "right",
-              textAlign: "center",
-            }}
-          >
-            <ContactForm />
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: "10px",
-            }}
-          >
-            <span
-              className="color_15 wixui-rich-text__text"
-              style={{
-                color: "#5f3799",
-                fontSize: "20px",
-              }}
-            >
-              <FaCopyright /> Akros Consultancy Services
-            </span>
-          </div>
+          <AddressCard />
         </>
       </Box>
     </Box>

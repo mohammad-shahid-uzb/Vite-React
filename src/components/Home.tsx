@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
+import { Image, Text, SimpleGrid, HStack } from "@chakra-ui/react";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import Toolbar from "@mui/material/Toolbar";
@@ -18,7 +19,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import CottageIcon from "@mui/icons-material/Cottage";
 import SchoolIcon from "@mui/icons-material/School";
-import { Image, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/akros_trans.png";
 import vitaliy from "../assets/vitaliy.jpg";
@@ -28,8 +28,8 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import uzbekflag from "../assets/Flag_Uzbek.png";
 import kazakflag from "../assets/kazak flag.png";
 import FeesCard from "./FeesCard";
-import Stack from "@mui/material/Stack";
 import Card from "@mui/material/Card";
+import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
 
@@ -162,8 +162,11 @@ export default function SeminarPage() {
     ),
   ];
   const Item = styled(Card)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "light",
     ...theme.typography.body2,
+    height: "650px",
+    width: "50%",
+    justifyContent: "center",
   }));
 
   return (
@@ -254,40 +257,42 @@ export default function SeminarPage() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <>
-          <Stack direction="row" spacing={1} justifyContent="center">
-            <Item>
-              <Text
-                color="#4caf50"
-                fontSize="60"
-                fontWeight="extrabold"
-                lineHeight="100%"
-                fontFamily={"Slab Serif "}
-                textAlign={["left"]}
-                paddingLeft={"60"}
-                paddingTop={"50"}
-              >
-                Akros <br />
-                Consultancy <br /> Services
-              </Text>
-              <Text
-                color="#0892d0"
-                fontSize="20"
-                fontWeight="extrabold"
-                fontFamily={"Slab Serif"}
-                lineHeight="150%"
-                textAlign={["left"]}
-                paddingLeft={"60"}
-              >
-                We help highly motivated international students gain admission{" "}
-                <br />
-                to and succeed at the best colleges in the Uzbeksitan &
-                Kazakhstan.
-              </Text>
-            </Item>
-            <Item>
-              <Image src={vitaliy} alt="home" width={"auto"} />
-            </Item>
-          </Stack>
+          <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} spacing={10}>
+            <HStack justifyContent="center">
+              <Item>
+                <Text
+                  color="#4caf50"
+                  fontSize="60"
+                  fontWeight="extrabold"
+                  lineHeight="100%"
+                  fontFamily={"Slab Serif "}
+                  textAlign={["left"]}
+                  paddingLeft={"60"}
+                  paddingTop={"50"}
+                >
+                  Akros <br />
+                  Consultancy <br /> Services
+                </Text>
+                <Text
+                  color="#0892d0"
+                  fontSize="20"
+                  fontWeight="extrabold"
+                  fontFamily={"Slab Serif"}
+                  lineHeight="150%"
+                  textAlign={["left"]}
+                  paddingLeft={"60"}
+                >
+                  We help highly motivated international students gain admission{" "}
+                  <br />
+                  to and succeed at the best colleges in the Uzbeksitan &
+                  Kazakhstan.
+                </Text>
+              </Item>
+              <Item>
+                <Image src={vitaliy} alt="home" minWidth={"100%"} />
+              </Item>
+            </HStack>
+          </SimpleGrid>
           <Text
             color="#4caf50"
             fontSize="42"
@@ -308,38 +313,40 @@ export default function SeminarPage() {
             Online application and counseling for students wherever they are.
             <br /> The skills to succeed in the application process and after.
           </Text>
-          <Stack direction="row" spacing={1} justifyContent="center">
-            <RecipeReviewCard
-              image={kazakflag}
-              name={"K"}
-              title={"Kazakhstan"}
-              subheader={"Country in Central Asia"}
-              subheader2={
-                " Medical education in Kazakhstan has been literally" +
-                " transformed in the past 10 years. Kazakhstan inherited" +
-                " the Soviet-time discipline-based teacher-centered" +
-                " system of education when no decisions could be made independently." +
-                " The curriculum was mostly governed in a traditional way," +
-                " with lectures being the core, little use of e-learning tools," +
-                " and assessment through oral exams and multiple-choice questions."
-              }
-            />
-            <RecipeReviewCard
-              image={uzbekflag}
-              name={"U"}
-              title={"Uzbekistan"}
-              subheader={"Country in Central Asia"}
-              subheader2={
-                "Uzbekistan is a central Asian country that became independent in 1991." +
-                "In accordance with the Decree of the President" +
-                "of the Republic of Uzbekistan, the duration of" +
-                "the educational field of General Medicine is set at 6 years." +
-                "Indian students are fully enrolled in 6-year “Therapeutic Workprograms." +
-                "The 6-year program meets all the requirements established" +
-                "by the National Medical Commission of India (duration of training and periods allotted for practice). "
-              }
-            />
-          </Stack>
+          <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 2 }} spacing={10}>
+            <HStack spacing={10} justifyContent="center">
+              <RecipeReviewCard
+                image={kazakflag}
+                name={"K"}
+                title={"Kazakhstan"}
+                subheader={"Country in Central Asia"}
+                subheader2={
+                  " Medical education in Kazakhstan has been literally" +
+                  " transformed in the past 10 years. Kazakhstan inherited" +
+                  " the Soviet-time discipline-based teacher-centered" +
+                  " system of education when no decisions could be made independently." +
+                  " The curriculum was mostly governed in a traditional way," +
+                  " with lectures being the core, little use of e-learning tools," +
+                  " and assessment through oral exams and multiple-choice questions."
+                }
+              />
+              <RecipeReviewCard
+                image={uzbekflag}
+                name={"U"}
+                title={"Uzbekistan"}
+                subheader={"Country in Central Asia"}
+                subheader2={
+                  "Uzbekistan is a central Asian country that became independent in 1991." +
+                  "In accordance with the Decree of the President" +
+                  "of the Republic of Uzbekistan, the duration of" +
+                  "the educational field of General Medicine is set at 6 years." +
+                  "Indian students are fully enrolled in 6-year “Therapeutic Workprograms." +
+                  "The 6-year program meets all the requirements established" +
+                  "by the National Medical Commission of India (duration of training and periods allotted for practice). "
+                }
+              />
+            </HStack>
+          </SimpleGrid>
           <Paper elevation={1}>
             <Typography
               variant="h4"
@@ -544,6 +551,7 @@ export default function SeminarPage() {
             hostelExp={"2.50"}
           />
         </>
+        <AddressCard />
       </Box>
     </Box>
   );

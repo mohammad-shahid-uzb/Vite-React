@@ -24,12 +24,12 @@ import nsp from "../assets/nsplsh.jpg";
 import nsp1 from "../assets/nsp1.jpg";
 import uzb from "../assets/uzb.jpg";
 import ipad from "../assets/iPad.jpg";
-import door from "../assets/2006.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import ContactForm from "./Form";
 import Typography from "@mui/material/Typography";
 import { FaCopyright } from "react-icons/fa";
+import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
 
@@ -494,112 +494,7 @@ export default function SeminarPage() {
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
-          <div className="row" style={{ display: "flex", marginTop: "50px" }}>
-            <div
-              style={{
-                marginLeft: "90px",
-                marginRight: "100px",
-                width: "450px",
-              }}
-            >
-              <img src={door} height={"950px"} width={"450px"} />
-            </div>
-            <div
-              className="column"
-              style={{ height: "1000px", width: "450px" }}
-            >
-              <ContactForm />
-              <hr
-                style={{
-                  backgroundColor: "black",
-                  height: 0.5,
-                }}
-              />
-              <div
-                style={{
-                  color: "Black",
-                  fontSize: "16px",
-                  padding: "15px",
-                }}
-              >
-                <span
-                  className="color_15 wixui-rich-text__text"
-                  style={{
-                    color: "Blue",
-                    fontSize: "20px",
-                  }}
-                >
-                  Corporate Office :
-                  <span
-                    style={{
-                      color: "Black",
-                      fontSize: "16px",
-                      padding: "15px",
-                    }}
-                  >
-                    Tashkent, Uzbekistan.
-                  </span>
-                </span>
-              </div>
-              <div>
-                <span
-                  className="color_15 wixui-rich-text__text"
-                  style={{
-                    color: "Blue",
-                    fontSize: "20px",
-                    padding: "15px",
-                  }}
-                >
-                  India Office :
-                  <span
-                    className="color_15 wixui-rich-text__text"
-                    style={{
-                      color: "Black",
-                      fontSize: "16px",
-                      paddingLeft: "10px",
-                    }}
-                  >
-                    <p
-                      style={{
-                        paddingLeft: "15px",
-                      }}
-                    >
-                      Address:Keas 69 Str. 15234, New Delhi, India.
-                    </p>
-                    <p
-                      style={{
-                        paddingLeft: "15px",
-                      }}
-                    >
-                      +30-2106019311 (landline) +30-6977664062 (mobile phone)
-                    </p>
-                    <p
-                      style={{
-                        paddingLeft: "15px",
-                      }}
-                    >
-                      +30-2106398905 (fax)
-                    </p>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-            }}
-          >
-            <span
-              className="color_15 wixui-rich-text__text"
-              style={{
-                color: "#5f3799",
-                fontSize: "20px",
-              }}
-            >
-              <FaCopyright /> Akros Consultancy Services
-            </span>
-          </div>
+          <AddressCard />
         </>
       </Box>
     </Box>
