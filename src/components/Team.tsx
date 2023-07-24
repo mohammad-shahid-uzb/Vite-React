@@ -21,9 +21,9 @@ import SchoolIcon from "@mui/icons-material/School";
 import { Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/akros_trans.png";
-//import Member1 from "../Assets/image1.png";
-//import Member2 from "../Assets/image2.png";
-//import Member3 from "../Assets/image3.png";
+import Member1 from "../assets/image1.png";
+import Member2 from "../assets/image2.png";
+import Member3 from "../assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -206,7 +206,7 @@ export default function OurTeamPage() {
             <div className="divider"></div>
             <div className="members">
               <div className="member">
-                <Image width={400} src={Logo} />
+                <Image width={400} src={Member1} />
                 <div className="description">
                   <h1>Mohammad Shahid</h1>
                   <h2>CEO</h2>
@@ -223,7 +223,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Logo} />
+                <Image width={400} src={Member2} />
                 <div className="description">
                   <h1>Omar Nadir</h1>
                   <h2>CEO</h2>
@@ -240,7 +240,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Logo} />
+                <Image width={400} src={Member3} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>
@@ -257,7 +257,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Logo} />
+                <Image width={400} src={Member3} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>
