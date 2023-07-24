@@ -206,7 +206,7 @@ export default function OurTeamPage() {
             <div className="divider"></div>
             <div className="members">
               <div className="member">
-                <img width={400} src={Member1} />
+                <Image width={400} src={Member1} />
                 <div className="description">
                   <h1>Mohammad Shahid</h1>
                   <h2>CEO</h2>
@@ -223,7 +223,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <img width={400} src={Member2} />
+                <Image width={400} src={Member2} />
                 <div className="description">
                   <h1>Omar Nadir</h1>
                   <h2>CEO</h2>
@@ -240,7 +240,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <img width={400} src={Member3} />
+                <Image width={400} src={Member3} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>
@@ -257,7 +257,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <img width={400} src={Member3} />
+                <Image width={400} src={Member3} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>

@@ -7,4 +7,3 @@ export default defineConfig({
   assetsInclude: ['**/*.md']
   
 })
-define: { global: "globalThis" }
