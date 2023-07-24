@@ -21,7 +21,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import { Image } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../assets/akros_trans.png";
-import Member1 from "../Assets/image1.png";
+//import Member1 from "../Assets/image1.png";
 import Member2 from "../Assets/image2.png";
 import Member3 from "../Assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
