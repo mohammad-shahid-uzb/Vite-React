@@ -257,7 +257,7 @@ export default function OurTeamPage() {
                 </div>
               </div>
               <div className="member">
-                <Image width={400} src={Member3} />
+                <Image width={400} src={Logo} />
                 <div className="description">
                   <h1>Khaled MAHER</h1>
                   <h2>CEO</h2>
