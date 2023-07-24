@@ -27,7 +27,7 @@ import Member3 from "../Assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-//import "./Team.css";
+import "./Team.css";
 
 const drawerWidth = 240;
 
@@ -206,7 +206,7 @@ export default function OurTeamPage() {
             <div className="divider"></div>
             <div className="members">
               <div className="member">
-                <Image width={400} src={Member1} />
+                <Image width={400} src={Logo} />
                 <div className="description">
                   <h1>Mohammad Shahid</h1>
                   <h2>CEO</h2>
