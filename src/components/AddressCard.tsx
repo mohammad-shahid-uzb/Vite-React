@@ -1,4 +1,3 @@
-import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import ContactForm from "./Form";
 import { FaCopyright } from "react-icons/fa";

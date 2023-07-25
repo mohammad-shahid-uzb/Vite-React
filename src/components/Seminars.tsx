@@ -26,9 +26,7 @@ import uzb from "../assets/uzb.jpg";
 import ipad from "../assets/iPad.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import ContactForm from "./Form";
 import Typography from "@mui/material/Typography";
-import { FaCopyright } from "react-icons/fa";
 import AddressCard from "./AddressCard";
 
 const drawerWidth = 240;
