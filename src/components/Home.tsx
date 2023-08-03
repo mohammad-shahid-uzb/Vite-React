@@ -106,7 +106,7 @@ function createData(name: string, CourseDetails: string, Tuition: string) {
   return { name, CourseDetails, Tuition };
 }
 
-export default function SeminarPage(props) {
+export default function SeminarPage() {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
