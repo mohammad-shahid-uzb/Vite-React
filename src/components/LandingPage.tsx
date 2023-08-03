@@ -4,7 +4,7 @@ import About from "../components/landingPage/about";
 import Services from "../components/landingPage/services";
 import Gallery from "../components/landingPage/gallery";
 import Testimonials from "../components/landingPage/testimonials";
-import Team from "../components/landingPage/team";
+//import Team from "../components/landingPage/team";
 import Contact from "../components/landingPage/contact";
 
 const LandingPage = (props) => {
@@ -16,7 +16,7 @@ const LandingPage = (props) => {
       <Services {...props} />
       <Gallery {...props} />
       <Testimonials {...props} />
-      <Team {...props} />
+      {/* <Team {...props} /> */}
       <Contact {...props} />
     </>
   );
