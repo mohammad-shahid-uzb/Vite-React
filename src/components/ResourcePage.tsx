@@ -31,7 +31,7 @@ import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
 import MainTeam from "./MainTeam";
 import Sidebar from "./Sidebar";
-import AddressCard from "./AddressCard";
+import Contact from "../components/landingPage/contact";
 
 const drawerWidth = 240;
 
@@ -168,7 +168,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function ResourcePage() {
+export default function ResourcePage(props) {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -180,7 +180,6 @@ export default function ResourcePage() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  console.log(post1);
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -291,7 +290,7 @@ export default function ResourcePage() {
               </main>
             </Container>
           </ThemeProvider>
-          <AddressCard />
+          <Contact {...props} />
         </>
       </Box>
     </Box>

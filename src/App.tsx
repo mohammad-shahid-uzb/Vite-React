@@ -1,24 +1,18 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import AdmissionForm from "./components/Admission";
-import ResourcePage from "./components/ResourcePage";
-import SeminarPage from "./components/Seminars";
-import OurTeamPage from "./components/Team";
-import HomePage from "./components/Home";
-import "./App.css";
-
-function App() {
+//
+import "./components/styles.css";
+import Maintenance from "./components/maintenance";
+export default function App() {
+  const maintenance = true;
   return (
-    <div>
-      <Routes>
-        <Route path="/seminars" element={<SeminarPage />} />
-        <Route path="/team" element={<OurTeamPage />} />
-        <Route path="/admissions" element={<AdmissionForm />} />
-        <Route path="/resources" element={<ResourcePage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="*" element={<Navigate to="/home" />} />
-      </Routes>
-    </div>
+    <>
+      {maintenance ? (
+        <Maintenance />
+      ) : (
+        <div className="App">
+          <h1>Hello CodeSandbox</h1>
+          <h2>Start editing to see some magic happen!</h2>
+        </div>
+      )}
+    </>
   );
 }
-
-export default App;

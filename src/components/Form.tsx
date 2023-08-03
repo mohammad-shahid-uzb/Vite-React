@@ -36,7 +36,6 @@ const ContactForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-  console.log(errors);
   // Function that displays a success toast on bottom right of the page when form submission is successful
   const toastifySuccess = () => {
     toast("Form sent!", {

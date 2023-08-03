@@ -29,7 +29,7 @@ import uzbekflag from "../assets/Flag_Uzbek.png";
 import kazakflag from "../assets/kazak flag.png";
 import FeesCard from "./FeesCard";
 import Card from "@mui/material/Card";
-import AddressCard from "./AddressCard";
+import Contact from "../components/landingPage/contact";
 
 const drawerWidth = 240;
 
@@ -106,7 +106,7 @@ function createData(name: string, CourseDetails: string, Tuition: string) {
   return { name, CourseDetails, Tuition };
 }
 
-export default function SeminarPage() {
+export default function SeminarPage(props) {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -168,6 +168,35 @@ export default function SeminarPage() {
     width: "50%",
     justifyContent: "center",
   }));
+
+  const initialState = {
+    name: "",
+    email: "",
+    message: "",
+  };
+
+  const [{ name, email, message }, setState] = useState(initialState);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setState((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name, email, message);
+    // emailjs.send(
+    //   "service_od0rubi",
+    //   "template_6cvpatk",
+    //   initialState,
+    //   "72ofXnNEBBUBs7NOF"
+    // );
+    setState({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -551,7 +580,7 @@ export default function SeminarPage() {
             hostelExp={"2.50"}
           />
         </>
-        <AddressCard />
+        <Contact handleChange={handleChange} handleSubmit={handleSubmit} />
       </Box>
     </Box>
   );

@@ -27,9 +27,8 @@ import Member3 from "../assets/image3.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import Contact from "../components/landingPage/contact";
 import "./Team.css";
-import AddressCard from "./AddressCard";
-
 const drawerWidth = 240;
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -101,7 +100,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function OurTeamPage() {
+export default function OurTeamPage(props) {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -276,7 +275,7 @@ export default function OurTeamPage() {
               </div>
             </div>
           </div>
-          <AddressCard />
+          <Contact {...props} />
         </>
       </Box>
     </Box>

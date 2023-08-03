@@ -10,7 +10,6 @@ interface MainProps {
 
 export default function MainTeam(props: MainProps) {
   const { posts, title } = props;
-  console.log(posts);
   return (
     <Grid
       item

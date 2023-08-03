@@ -27,7 +27,7 @@ import ipad from "../assets/iPad.jpg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import AddressCard from "./AddressCard";
+import Contact from "../components/landingPage/contact";
 
 const drawerWidth = 240;
 
@@ -100,7 +100,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function AdmissionForm() {
+export default function AdmissionForm(props) {
   const theme = useTheme();
   const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
@@ -485,7 +485,7 @@ export default function AdmissionForm() {
               <Button variant="contained">Reserve Now</Button>
             </div>
           </div>
-          <AddressCard />
+          <Contact {...props} />
         </>
       </Box>
     </Box>
